@@ -4383,6 +4383,7 @@ http://www.stanford.edu/dept/itss/docs/oracle/10g/server.101/b10759/statements_1
 		case 'mysqli': 
 				$drivername='mysql'; 
 				break;
+		case 'postgresql':
 		case 'postgres7':
 		case 'postgres8':
 		case 'postgres9':
