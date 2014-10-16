@@ -36,6 +36,7 @@ class WaDESearch_PHP {
 	error_log ($dsn);
 //connection to the database, exception if the connection fails
 	$db = &ADONewConnection($dsn);
+	$db->debug=true;
 	$db->SetFetchMode(ADODB_FETCH_ASSOC);
 	$db->debug = false;
 	$rs = $db->Execute('SELECT "WADE_R"."GetCatalog"(' . $db->qstr($loctype) . ',' . $db->qstr($loctxt) . ',' . $db->qstr($orgid) . ',' . $db->qstr($state) . ') As answer')->GetRows();
