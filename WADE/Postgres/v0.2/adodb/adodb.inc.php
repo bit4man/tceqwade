@@ -4165,9 +4165,9 @@ http://www.stanford.edu/dept/itss/docs/oracle/10g/server.101/b10759/statements_1
 			case 'ifx':
 			case 'maxsql': $class = $db = 'mysqlt'; break;
 			case 'postgres':
-			case 'postgresql':
-			case 'postgres8':
 			case 'pgsql': $class = $db = 'postgres7'; break;
+			case 'postgresql':
+			case 'postgres8': $class = $db = 'postgres8'; break;
 			default:
 				$class = $db; break;
 		}
