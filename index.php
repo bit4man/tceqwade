@@ -206,9 +206,9 @@ line-height: 1.4;
 </head>
 <body>
 
-<%
-  baseurl = '/WADE/Postgres/v0.2/';
-%>
+<?php
+  baseurl='/WADE/Postgres/v0.2/';
+?>
 
 <section class='container'>
           <hgroup>
@@ -219,24 +219,24 @@ line-height: 1.4;
         <div class="row">
           <section class='col-xs-12 col-sm-6 col-md-6'>
             <section>
-              <h2>Getting started with version 0.2/h2>
+              <h2>Getting started with version 0.2</h2>
                 <p>This server has a backend DB and several access points:</p>
                 <ul>
 					<li>Use the <a href="/pgAdmin">Database Console</a> to get SQL and access to the schema. Credentials to login can be provided to you by email.</li>
-					<li>Restful services http://<%= getenv('OPENSHIFT_APP_DNS') %>/Postgres/v0.2/</li>
+					<li>Restful services http://<?php echo getenv('OPENSHIFT_APP_DNS'); ?>/Postgres/v0.2/</li>
 					<ul>
-						<li><a href="<%=baseurl%>GetCatalog/GetCatalog.php">GetCatalog</a>: loctype, loctxt, orgid, state</li>
-						<li><a href="<%=baseurl%>GetDetail/GetDetail.php">GetDetail</a>: reportid, loctype, loctxt, datatype</li>
-						<li><a href="<%=baseurl%>GetMethod/GetMethod.php">GetMethod</a>: reportid, loctype, loctxt, datatype</li>
-						<li><a href="<%=baseurl%>GetSummary/GetSummary.php">GetSummary</a>: loctype, loctxt, orgid, reportid, datatype</li>
+						<li><a href="<?php echo $baseurl; ?>GetCatalog/GetCatalog.php">GetCatalog</a>: loctype, loctxt, orgid, state</li>
+						<li><a href="<?php echo $baseurl; ?>GetDetail/GetDetail.php">GetDetail</a>: reportid, loctype, loctxt, datatype</li>
+						<li><a href="<?php echo $baseurl; ?>GetMethod/GetMethod.php">GetMethod</a>: reportid, loctype, loctxt, datatype</li>
+						<li><a href="<?php echo $baseurl; ?>GetSummary/GetSummary.php">GetSummary</a>: loctype, loctxt, orgid, reportid, datatype</li>
 					</ul>
                 </ul>
                 For direct REST calls from outside API, use the following URLs:
                 <ul>
-                <li>GetCatalog: <%=baseurl%>nostyles/GetCatalog/GetCatalog.php</li>
-                <li>GetDetail: <%=baseurl%>nostyles/GetDetail/GetDetail.php</li>
-                <li>GetMethod: <%=baseurl%>nostyles/GetMethod/GetMethod.php</li>
-                <li>GetSummary: <%=baseurl%>nostyles/GetSummary/GetSummary.php</li>
+                <li>GetCatalog: <?php echo $baseurl; ?>/nostyles/GetCatalog/GetCatalog.php</li>
+                <li>GetDetail: <?php echo $baseurl; ?>/nostyles/GetDetail/GetDetail.php</li>
+                <li>GetMethod: <?php echo $baseurl; ?>/nostyles/GetMethod/GetMethod.php</li>
+                <li>GetSummary: <?php echo $baseurl; ?>/nostyles/GetSummary/GetSummary.php</li>
                 </ul>
                 
             </section>
