@@ -206,9 +206,7 @@ line-height: 1.4;
 </head>
 <body>
 
-<?php
-  baseurl='/WADE/Postgres/v0.2/';
-?>
+<?php baseurl='/WADE/Postgres/v0.2/'; ?>
 
 <section class='container'>
           <hgroup>
@@ -219,6 +217,7 @@ line-height: 1.4;
         <div class="row">
           <section class='col-xs-12 col-sm-6 col-md-6'>
             <section>
+			  <img src="images/wswclogo.png"/>
               <h2>Getting started with version 0.2</h2>
                 <p>This server has a backend DB and several access points:</p>
                 <ul>
@@ -231,7 +230,7 @@ line-height: 1.4;
 						<li><a href="<?php echo $baseurl; ?>GetSummary/GetSummary.php">GetSummary</a>: loctype, loctxt, orgid, reportid, datatype</li>
 					</ul>
                 </ul>
-                For direct REST calls from outside API, use the following URLs:
+                <p>For direct REST calls from outside API, use the following URLs:</p>
                 <ul>
                 <li>GetCatalog: <?php echo $baseurl; ?>/nostyles/GetCatalog/GetCatalog.php</li>
                 <li>GetDetail: <?php echo $baseurl; ?>/nostyles/GetDetail/GetDetail.php</li>
@@ -262,8 +261,6 @@ line-height: 1.4;
                     <li><a href="http://webchat.freenode.net/?randomnick=1&channels=openshift&uio=d4">IRC channel at #openshift on freenode.net</a></li>
                     <li><a href="http://git-scm.com/documentation">Git documentation</a></li>
                   </ul>
-
-
           </section>
         </div>
 
