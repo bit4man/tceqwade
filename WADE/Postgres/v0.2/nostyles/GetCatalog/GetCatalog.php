@@ -27,13 +27,13 @@ class WaDESearch_PHP {
 	}
 //pass variables to protected function 'get results'
 
-	print_r($loctype);
+	error_log($loctype);
         echo $this->get_results($loctype, $loctxt, $orgid, $state);
         }
     protected function get_results($loctype, $loctxt, $orgid, $state) {
 //import the connection string
 	global $dsn;
-	print_r ($dsn);
+	error_log ($dsn);
 //connection to the database, exception if the connection fails
 	$db = &ADONewConnection($dsn);
 	$db->SetFetchMode(ADODB_FETCH_ASSOC);
