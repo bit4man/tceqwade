@@ -13,7 +13,7 @@
 	<p><b>Organization: </b> <xsl:value-of select="WC:OrganizationName"/></p>
 <!--	<p>For all of <xsl:value-of select="WC:OrganizationName"/>'s summary datasets (availability, allocations, use, physical water supply, regulatory):
 		<a><xsl:attribute name="href">
-			<xsl:text disable-output-escaping="yes">http://localhost/WADE/Postgres/v0.2/GetSummary/GetSummary.php?loctype=</xsl:text>
+			<xsl:text disable-output-escaping="yes">/WADE/Postgres/v0.2/GetSummary/GetSummary.php?loctype=</xsl:text>
 			<xsl:value-of select="WC:Report/WC:Location/WC:LocationType"/>		
 			<xsl:text disable-output-escaping="yes">&amp;loctxt=</xsl:text>
 			<xsl:value-of select="WC:Report/WC:Location/WC:LocationText"/>		
@@ -53,7 +53,7 @@
 		<xsl:when test="../../WC:DataCategory='SUMMARY'">
 			<td><a><xsl:attribute name="href">
 				<xsl:text disable-output-escaping="yes">
-						http://localhost/WADE/Postgres/v0.2/GetSummary/GetSummary.php?loctype=</xsl:text>
+						/WADE/Postgres/v0.2/GetSummary/GetSummary.php?loctype=</xsl:text>
 						<xsl:value-of select="../../../WC:LocationType"/>
 						<xsl:text disable-output-escaping="yes">&amp;loctxt=</xsl:text>
 						<xsl:value-of select="../../../WC:LocationText"/>
@@ -73,7 +73,7 @@
 				<xsl:otherwise>
 					<td><a><xsl:attribute name="href">
 						<xsl:text disable-output-escaping="yes">
-						http://localhost/WADE/Postgres/v0.2/GetDetail/GetDetail.php?reportid=</xsl:text>
+						/WADE/Postgres/v0.2/GetDetail/GetDetail.php?reportid=</xsl:text>
 						<xsl:value-of select="../../../../WC:ReportIdentifier"/>
 						<xsl:text disable-output-escaping="yes">&amp;loctype=</xsl:text>
 						<xsl:value-of select="../../../WC:LocationType"/>

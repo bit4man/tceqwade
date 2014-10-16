@@ -112,7 +112,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:WC="http://www.exchangene
 			<td><xsl:value-of select="../../WC:ActualFlow/WC:ActualVolume/WC:ValueTypeCode"/></td>			
 			<td><a><xsl:attribute name="href">
 						<xsl:text disable-output-escaping="yes">
-							http://localhost/WADE/Postgres/v0.2/GetMethod/GetMethod.php?methodid=</xsl:text>
+							/WADE/Postgres/v0.2/GetMethod/GetMethod.php?methodid=</xsl:text>
 						<xsl:value-of select="../../../../../../../WC:OrganizationIdentifier"/>
 						<xsl:text disable-output-escaping="yes">&amp;methodname=</xsl:text>
 						<xsl:value-of select="../../WC:ActualFlow/WC:ActualVolume/WC:Method/WC:MethodName"/>
@@ -127,7 +127,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:WC="http://www.exchangene
 			<td><xsl:value-of select="../../WC:ActualFlow/WC:ActualRate/WC:ValueTypeCode"/></td>			
 			<td><a><xsl:attribute name="href">
 						<xsl:text disable-output-escaping="yes">
-							http://localhost/WADE/Postgres/v0.2/GetMethod/GetMethod.php?methodid=</xsl:text>
+							/WADE/Postgres/v0.2/GetMethod/GetMethod.php?methodid=</xsl:text>
 						<xsl:value-of select="../../../../../../../WC:OrganizationIdentifier"/>
 						<xsl:text disable-output-escaping="yes">&amp;methodname=</xsl:text>
 						<xsl:value-of select="../../WC:ActualFlow/WC:ActualRate/WC:Method/WC:MethodName"/>
@@ -266,7 +266,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:WC="http://www.exchangene
 			<td><xsl:value-of select="../WC:UseAmount/WC:UseVolume/WC:ValueTypeCode"/></td>			
 			<td><a><xsl:attribute name="href">
 						<xsl:text disable-output-escaping="yes">
-							http://localhost/WADE/Postgres/v0.2/GetMethod/GetMethod.php?methodid=</xsl:text>
+							/WADE/Postgres/v0.2/GetMethod/GetMethod.php?methodid=</xsl:text>
 						<xsl:value-of select="../../../../../../WC:OrganizationIdentifier"/>
 						<xsl:text disable-output-escaping="yes">&amp;methodname=</xsl:text>
 						<xsl:value-of select="../WC:UseAmount/WC:UseVolume/WC:Method/WC:MethodName"/>
@@ -322,7 +322,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:WC="http://www.exchangene
 			<td><xsl:value-of select="../WC:ReturnFlowAmount/WC:ReturnVolume/WC:ValueTypeCode"/></td>
 			<td><a><xsl:attribute name="href">
 						<xsl:text disable-output-escaping="yes">
-							http://localhost/WADE/Postgres/v0.2/GetMethod/GetMethod.php?methodid=</xsl:text>
+							/WADE/Postgres/v0.2/GetMethod/GetMethod.php?methodid=</xsl:text>
 						<xsl:value-of select="../../../../../WC:OrganizationIdentifier"/>
 						<xsl:text disable-output-escaping="yes">&amp;methodname=</xsl:text>
 						<xsl:value-of select="../WC:ReturnFlowAmount/WC:ReturnVolume/WC:Method/WC:MethodName"/>

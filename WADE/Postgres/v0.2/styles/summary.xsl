@@ -171,7 +171,7 @@
 					<td><xsl:value-of select="WC:WFSReference/WC:WFSFeatureIdentifier"/></td>
 					<td><a><xsl:attribute name="href">
 						<xsl:text disable-output-escaping="yes">
-							http://localhost/WADE/Postgres/v0.2/GetMethod/GetMethod.php?methodid=</xsl:text>
+							/WADE/Postgres/v0.2/GetMethod/GetMethod.php?methodid=</xsl:text>
 						<xsl:value-of select="../../../WC:OrganizationIdentifier"/>
 						<xsl:text disable-output-escaping="yes">&amp;methodname=</xsl:text>
 						<xsl:value-of select="WC:AvailabilityEstimate/WC:AvailabilityAmount/WC:Method/WC:MethodName"/>
@@ -193,7 +193,7 @@
 					<td><xsl:value-of select="format-number(WC:AvailabilityEstimate/WC:AvailabilityMetric/WC:MetricScaleNumber, '#,###.00','num')"/></td>
 					<td><a><xsl:attribute name="href">
 						<xsl:text disable-output-escaping="yes">
-							http://localhost/WADE/Postgres/v0.2/GetMethod/GetMethod.php?methodid=</xsl:text>
+							/WADE/Postgres/v0.2/GetMethod/GetMethod.php?methodid=</xsl:text>
 						<xsl:value-of select="../../../WC:OrganizationIdentifier"/>
 						<xsl:text disable-output-escaping="yes">&amp;methodname=</xsl:text>
 						<xsl:value-of select="WC:AvailabilityEstimate/WC:AvailabilityMetric/WC:Method/WC:MethodName"/>
@@ -258,7 +258,7 @@
 				<td><xsl:value-of select="WC:WFSReference/WC:WFSFeatureIdentifier"/></td>
 				<td><a><xsl:attribute name="href">
 						<xsl:text disable-output-escaping="yes">
-							http://localhost/WADE/Postgres/v0.2/GetMethod/GetMethod.php?methodid=</xsl:text>
+							/WADE/Postgres/v0.2/GetMethod/GetMethod.php?methodid=</xsl:text>
 						<xsl:value-of select="../../../../WC:OrganizationIdentifier"/>
 						<xsl:text disable-output-escaping="yes">&amp;methodname=</xsl:text>
 						<xsl:value-of select="WC:WaterUseAmountSummary/WC:WaterUseAmount/WC:Method/WC:MethodName"/>
@@ -301,7 +301,7 @@
 				<td><xsl:value-of select="WC:WFSReference/WC:WFSFeatureIdentifier"/></td>
 				<td><a><xsl:attribute name="href">
 						<xsl:text disable-output-escaping="yes">
-							http://localhost/WADE/Postgres/v0.2/GetMethod/GetMethod.php?methodid=</xsl:text>
+							/WADE/Postgres/v0.2/GetMethod/GetMethod.php?methodid=</xsl:text>
 						<xsl:value-of select="../../../../WC:OrganizationIdentifier"/>
 						<xsl:text disable-output-escaping="yes">&amp;methodname=</xsl:text>
 						<xsl:value-of select="WC:SupplyAmountSummary/WC:Method/WC:MethodName"/>
