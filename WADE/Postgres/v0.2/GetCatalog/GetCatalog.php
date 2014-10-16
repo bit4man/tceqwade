@@ -25,14 +25,12 @@ class WaDESearch_PHP {
 		$orgid = $_REQUEST["orgid"];
 		$state = $_REQUEST["state"];
 	}
-	print_r ($loctype);
 //pass variables to protected function 'get results'
 
         echo $this->get_results($loctype, $loctxt, $orgid, $state);
         }
     protected function get_results($loctype, $loctxt, $orgid, $state) {
 //import the connection string
-	print_r ($dsn); // A bit of debugging
 	global $dsn;
 //connection to the database, exception if the connection fails
 	$db = &ADONewConnection($dsn);
