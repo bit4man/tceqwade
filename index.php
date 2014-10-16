@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Welcome to OpenShift</title>
+  <title>Welcome to TCEQ WADE on Red Hat OpenShift</title>
 
 <style>
 
@@ -206,36 +206,39 @@ line-height: 1.4;
 </head>
 <body>
 
+<%
+  baseurl = '/WADE/Postgres/v0.2/';
+%>
+
 <section class='container'>
           <hgroup>
-            <h1>Welcome to your PHP application on OpenShift</h1>
+            <h1>Welcome to Western States Water Counsil on OpenShift</h1>
           </hgroup>
 
 
         <div class="row">
           <section class='col-xs-12 col-sm-6 col-md-6'>
             <section>
-              <h2>Deploying code changes</h2>
-                <p>OpenShift uses the <a href="http://git-scm.com/">Git version control system</a> for your source code, and grants you access to it via the Secure Shell (SSH) protocol. In order to upload and download code to your application you need to give us your <a href="https://www.openshift.com/developers/remote-access">public SSH key</a>. You can upload it within the web console or install the <a href="https://www.openshift.com/developers/rhc-client-tools-install">RHC command line tool</a> and run <code>rhc setup</code> to generate and upload your key automatically.</p>
-
-                <h3>Working in your local Git repository</h3>
-                <p>If you created your application from the command line and uploaded your SSH key, rhc will automatically download a copy of that source code repository (Git calls this 'cloning') to your local system.</p>
-
-                <p>If you created the application from the web console, you'll need to manually clone the repository to your local system. Copy the application's source code Git URL and then run:</p>
-
-<pre>$ git clone &lt;git_url&gt; &lt;directory_to_create&gt;
-
-# Within your project directory
-# Commit your changes and push to OpenShift
-
-$ git commit -a -m 'Some commit message'
-$ git push</pre>
-
-
-                  <ul>
-                    <li><a href="https://www.openshift.com/developers/deploying-and-building-applications">Learn more about deploying and building your application</a></li>
-                    <li><a href="http://openshift.github.io/documentation/oo_cartridge_guide.html#php">Read more details about Repository Layout, Action Hooks and Markers</a></li>
-                  </ul>
+              <h2>Getting started with version 0.2/h2>
+                <p>This server has a backend DB and several access points:</p>
+                <ul>
+					<li>Use the <a href="/pgAdmin">Database Console</a> to get SQL and access to the schema. Credentials to login can be provided to you by email.</li>
+					<li>Restful services http://<%= getenv('OPENSHIFT_APP_DNS') %>/Postgres/v0.2/</li>
+					<ul>
+						<li><a href="<%=baseurl%>GetCatalog/GetCatalog.php">GetCatalog</a>: loctype, loctxt, orgid, state</li>
+						<li><a href="<%=baseurl%>GetDetail/GetDetail.php">GetDetail</a>: reportid, loctype, loctxt, datatype</li>
+						<li><a href="<%=baseurl%>GetMethod/GetMethod.php">GetMethod</a>: reportid, loctype, loctxt, datatype</li>
+						<li><a href="<%=baseurl%>GetSummary/GetSummary.php">GetSummary</a>: loctype, loctxt, orgid, reportid, datatype</li>
+					</ul>
+                </ul>
+                For direct REST calls from outside API, use the following URLs:
+                <ul>
+                <li>GetCatalog: <%=baseurl%>nostyles/GetCatalog/GetCatalog.php</li>
+                <li>GetDetail: <%=baseurl%>nostyles/GetDetail/GetDetail.php</li>
+                <li>GetMethod: <%=baseurl%>nostyles/GetMethod/GetMethod.php</li>
+                <li>GetSummary: <%=baseurl%>nostyles/GetSummary/GetSummary.php</li>
+                </ul>
+                
             </section>
 
           </section>
