@@ -1,0 +1,14 @@
+#!/bin/bash
+# Build initial database
+
+DBINIT=$OPENSHIFT_HOMEDIR/WaDE_Sept2014_Postgres
+
+cd $DBINIT
+
+# Create custom schemas
+psql -d tceqdemo -f install.sql > install.log
+
+# Restore DB
+pg_restore -d $OPENSHIFT_APP_NAME WaDE_Postgres_Sept2014.backup > restore.log
+
+

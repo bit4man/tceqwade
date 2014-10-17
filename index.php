@@ -206,7 +206,7 @@ line-height: 1.4;
 </head>
 <body>
 
-<?php baseurl='/WADE/Postgres/v0.2/'; ?>
+<?php $baseurl='/WADE/Postgres/v0.2/'; ?>
 
 <section class='container'>
           <hgroup>
