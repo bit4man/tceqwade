@@ -12,7 +12,7 @@ function initdb()
   psql -d $OPENSHIFT_APP_NAME -f install.sql > install.log
 
   # Restore DB
-  pg_restore -d $OPENSHIFT_APP_NAME WaDE_Postgres_Sept2014.backup > restore.log
+  pg_restore -d $OPENSHIFT_APP_NAME --no-tablespaces WaDE_Postgres_Sept2014.backup > restore.log
 }
 
 DBEXISTS=`psql -tA 2>/dev/null <<EOF
