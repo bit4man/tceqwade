@@ -15,12 +15,13 @@ function initdb()
   pg_restore -d $OPENSHIFT_APP_NAME WaDE_Postgres_Sept2014.backup > restore.log
 }
 
-DBEXISTS=`psql -tA <<EOF
+DBEXISTS=`psql -tA 2>/dev/null <<EOF
 select 1 from "WADE"."DBVERSION" where "VERSION" = '1.3';
-EOF`
+EOF
+`
 
 # Only run the DB init script if there is no installation
 # This should only run on the first deployment
 
-if [[ $DBEXISTS != 1 ]]; then initdb(); fi
+if [[ "$DBEXISTS" != "1" ]]; then initdb(); fi
 
