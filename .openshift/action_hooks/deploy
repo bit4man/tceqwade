@@ -25,6 +25,6 @@ EOF
 
 if [[ "$DBEXISTS" != "1" ]]
 then 
-  initdb() 
+  initdb
 fi
 
