@@ -1,14 +1,26 @@
 #!/bin/bash
 # Build initial database
 
-DBINIT=$OPENSHIFT_REPO_DIR/WaDE_Sept2014_Postgres
 
-cd $DBINIT
+function initdb()
+{
+  DBINIT=$OPENSHIFT_REPO_DIR/WaDE_Sept2014_Postgres
 
-# Create custom schemas
-psql -d $OPENSHIFT_APP_NAME -f install.sql > install.log
+  cd $DBINIT
 
-# Restore DB
-pg_restore -d $OPENSHIFT_APP_NAME WaDE_Postgres_Sept2014.backup > restore.log
+  # Create custom schemas
+  psql -d $OPENSHIFT_APP_NAME -f install.sql > install.log
 
+  # Restore DB
+  pg_restore -d $OPENSHIFT_APP_NAME WaDE_Postgres_Sept2014.backup > restore.log
+}
+
+DBEXISTS=`psql -tA <<EOF
+select 1 from "WADE"."DBVERSION" where "VERSION" = '1.3';
+EOF`
+
+# Only run the DB init script if there is no installation
+# This should only run on the first deployment
+
+if [[ $DBEXISTS != 1 ]]; then initdb(); fi
 
