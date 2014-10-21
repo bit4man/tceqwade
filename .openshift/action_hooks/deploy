@@ -23,5 +23,8 @@ EOF
 # Only run the DB init script if there is no installation
 # This should only run on the first deployment
 
-if [[ "$DBEXISTS" != "1" ]]; then initdb(); fi
+if [[ "$DBEXISTS" != "1" ]]
+then 
+  initdb() 
+fi
 
